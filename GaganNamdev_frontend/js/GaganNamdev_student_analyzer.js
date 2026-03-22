@@ -88,3 +88,29 @@ students.forEach(function(student) {
     let avg = calculateAverage(student);
     console.log(student.name + " Average: " + avg.toFixed(1));
 });
+
+// Step 4: Subject-wise highest score
+
+let subjects = ["Math", "English", "Science", "History", "Computer"];
+
+subjects.forEach(function(subject) {
+
+    let highest = 0;
+    let topperName = "";
+
+    // one by one evry student check 
+    students.forEach(function(student) {
+
+        student.marks.forEach(function(m) {
+
+            if (m.subject === subject && m.score > highest) {
+                highest = m.score;
+                topperName = student.name;
+            }
+
+        });
+
+    });
+
+    console.log("Highest in " + subject + ": " + topperName + " (" + highest + ")");
+});
