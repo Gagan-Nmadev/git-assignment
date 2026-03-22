@@ -60,3 +60,19 @@ const students = [
 ];
 console.log(JSON.stringify(students, null, 2));
 
+// Step 2: Calculate total marks
+
+function calculateTotalMarks(student) {
+    let total = 0;
+
+    for (let i = 0; i < student.marks.length; i++) {
+        total = total + student.marks[i].score;
+    }
+
+    return total;
+}
+students.forEach(function(student) {
+    let total = calculateTotalMarks(student);
+    console.log(student.name + " Total Marks: " + total);
+});
+
