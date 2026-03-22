@@ -156,3 +156,41 @@ students.forEach(function(student) {
 });
 
 console.log("Class Topper: " + topperName + " with " + highestMarks + " marks");
+
+// Step 7: Grade calculation
+
+function getGrade(student) {
+
+    let avg = calculateAverage(student);
+
+    // Check fail conditions
+    let failedSubject = "";
+    
+    for (let i = 0; i < student.marks.length; i++) {
+        if (student.marks[i].score <= 40) {
+            failedSubject = student.marks[i].subject;
+            break;
+        }
+    }
+
+    if (failedSubject !== "") {
+        return "Fail (Failed in " + failedSubject + ")";
+    }
+
+    if (student.attendance < 75) {
+        return "Fail (Low Attendance)";
+    }
+
+    // Grade logic
+    if (avg >= 85) return "A";
+    else if (avg >= 70) return "B";
+    else if (avg >= 50) return "C";
+    else return "Fail";
+}
+
+
+// Print grades
+students.forEach(function(student) {
+    let grade = getGrade(student);
+    console.log(student.name + " Grade: " + grade);
+});
