@@ -114,3 +114,27 @@ subjects.forEach(function(subject) {
 
     console.log("Highest in " + subject + ": " + topperName + " (" + highest + ")");
 });
+
+// Step 5: Subject-wise average score
+
+subjects.forEach(function(subject) {
+
+    let total = 0;
+
+    // adding evry students marks
+    students.forEach(function(student) {
+
+        student.marks.forEach(function(m) {
+
+            if (m.subject === subject) {
+                total += m.score;
+            }
+
+        });
+
+    });
+
+    let avg = total / students.length;
+
+    console.log("Average " + subject + " Score: " + avg);
+});
