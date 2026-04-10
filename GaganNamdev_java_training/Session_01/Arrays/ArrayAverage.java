@@ -15,4 +15,20 @@ public class ArrayAverage {
 
         int sum = 0;
 
+        // input array elements
+        System.out.println("Enter array elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+            sum = sum + arr[i]; // add each element to sum
+        }
+
+        // 🔹 calculate average
+        double average = (double) sum / n;
+
+        // 🔹 output result
+        System.out.println("Average of array elements is: " + average);
+
+        sc.close();
+    }
 }
+
