@@ -38,4 +38,18 @@ public class PatternPrinter {
         }
     }
 
+    // Method for square
+    private static void printSquare(int size) {
+
+        for (int row = 1; row <= size; row++) {
+
+            for (int col = 1; col <= size; col++) {
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+    }
+}
+
     
