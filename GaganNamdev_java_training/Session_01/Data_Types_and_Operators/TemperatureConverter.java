@@ -17,4 +17,15 @@ public class TemperatureConverter {
         System.out.println("\nFahrenheit to Celsius:");
         System.out.println(fahrenheit + " °F = " + celsius + " °C");
     }
+
+     //  MAIN METHOD
+    public static void main(String[] args) {
+
+        TemperatureConverter converter = new TemperatureConverter();
+
+        // Example values
+        converter.celsiusToFahrenheit(25);   // 25°C → °F
+        converter.fahrenheitToCelsius(77);   // 77°F → °C
+    }
 }
+
