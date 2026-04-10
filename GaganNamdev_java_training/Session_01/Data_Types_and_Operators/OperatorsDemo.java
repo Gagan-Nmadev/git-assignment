@@ -14,5 +14,18 @@ public class OperatorsDemo {
         System.out.println("Division: " + (a / b));        // 2
         System.out.println("Modulus: " + (a % b));         // 0
 
+
+       //     RELATIONAL OPERATORS
+        // =========================
+        System.out.println("\n===== Relational Operators =====");
+
+        System.out.println("a == b : " + (a == b));  // false
+        System.out.println("a != b : " + (a != b));  // true
+        System.out.println("a > b  : " + (a > b));   // true
+        System.out.println("a < b  : " + (a < b));   // false
+        System.out.println("a >= b : " + (a >= b));  // true
+        System.out.println("a <= b : " + (a <= b));  // false
+
+
     
 }
