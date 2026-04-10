@@ -7,5 +7,14 @@ public class SumOfEvenNumbers {
 
         //  variable to store sum of even numbers
         int sum = 0;
-    
+        while (i <= 10) {
+
+            // 🔹 check even number
+            if (i % 2 == 0) {
+                sum = sum + i; // add even number to sum
+            }
+
+            i++; // increment counter
+        }
+
 }
