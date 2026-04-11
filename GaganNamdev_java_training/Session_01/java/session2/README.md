@@ -161,10 +161,10 @@ GET http://localhost:8080/users/1
 POST http://localhost:8080/users
 
 ```json
-{
-  "id": 3,
-  "name": "Shyam"
-}
+[
+  {"id":1,"name":"Gagan"},
+  {"id":2,"name":"Ram"}
+]
 ```
 
 ---
