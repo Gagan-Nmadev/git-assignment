@@ -1,4 +1,4 @@
-package com.training.todoapp.Service;
+import com.training.todoapp.service.TodoService;
 
 import com.training.todoapp.client.NotificationServiceClient;
 import com.training.todoapp.dto.TodoDTO;
@@ -167,4 +167,4 @@ class TodoServiceTest {
         field.setAccessible(true);
         field.set(todo, id);
     }
-}}
+}
