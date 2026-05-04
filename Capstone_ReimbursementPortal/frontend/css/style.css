@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #020617, #0f172a, #020617);
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* LOGIN */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.brand-block {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.brand-block h1 {
+  color: #facc15;
+}
+
+.brand-block p {
+  color: #94a3b8;
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: #020617;
+  border-bottom: 1px solid #1e293b;
+}
+
+.nav-left h2 {
+  color: #facc15;
+}
+
+.welcome-text {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+/* MAIN */
+
+.main-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 24px;
+}
+
+.panel-header h3 {
+  color: #ffffff;
+}
+
+.panel-header p {
+  color: #94a3b8;
+}
+
+/* CARD */
+
+.card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card h4 {
+  color: #facc15;
+  margin-bottom: 15px;
+}
+
+/* FORM */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  background: #020617;
+  border: 1px solid #475569;
+  color: #e2e8f0;
+  border-radius: 10px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #3b82f6;
+}
+
+/* BUTTONS */
+
+.primary-btn {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+  border-radius: 10px;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  background: #1e293b;
+  color: #e2e8f0;
+  border: 1px solid #334155;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.danger-btn {
+  background: #ef4444;
+  color: white;
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+
+.nav-btn {
+  background: #1e293b;
+  color: white;
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover,
+.danger-btn:hover,
+.nav-btn:hover {
+  opacity: 0.9;
+}
+
+/* TABLE */
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th {
+  background: #020617;
+  color: #facc15;
+}
+
+table td {
+  background: #020617;
+}
+
+table th,
+table td {
+  padding: 12px;
+  border-bottom: 1px solid #1e293b;
+}
+
+/* ACTION BUTTONS */
+
+.approve-btn {
+  background: #22c55e;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.reject-btn {
+  background: #ef4444;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/* 🔥 NEW: Disabled buttons look */
+
+.approve-btn:disabled,
+.reject-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* INPUT */
+
+.small-input {
+  min-width: 150px;
+}
+
+.small-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* PAGINATION */
+
+.pagination {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+/* TOAST */
+
+.toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #22c55e;
+  padding: 10px 20px;
+  border-radius: 10px;
+  z-index: 9999;
+  font-weight: 600;
+}
+
+.toast.error {
+  background: #ef4444;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
